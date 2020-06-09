@@ -1,2 +1,2 @@
-# Linchpin-Coffee-JS
+# Linchpin Coffee
  
