@@ -23,6 +23,12 @@ body {
     bottom: 0;
     z-index: -2;
     // background-attachment: fixed;
+
+    @media (max-width: 767px) {
+        .video {
+            display: none;
+        }
+    }
 }
  
 .overlay {
@@ -42,37 +48,108 @@ body {
     height: 100vh;
     color: $white;
     text-shadow: $text-shadow;
+
+    @media (max-width: 767px) {
+        .landing {
+            background: url('../images/photo-of-brewed-coffee-2616174.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
 }
 
 .logo {
     text-align: center;
     height: 100vh;
+
+    @media (min-width: $break) {  
+        .logo {
+           padding-right: 30px;
+        }
+    }
 }
 
 .col-1 {
     width: 100%;
     max-width: 100%;
     height: 170px;
+
+    @media (min-width: 504px) {
+        .col-1 {
+            height: 250px;
+        }
+    }
+    @media (min-width: 698px) {
+        .col-1 {
+            height: 300px;
+        }
+    }
+
+    @media (min-width: $break) {  
+        .col-1 {
+            width: 53%;
+            height: 100vh;
+        }
+    }
+}
+
+@media (min-width: $break) {  
+    .down-arrow {
+        padding-bottom: 20px;
+        margin-right: 3rem;
+    }
 }
 
 .col-2 {
     width: 100%;
+
+    @media (min-width: $break) {  
+        .col-2 {
+            width: 40%;
+        }
+    }
 }
 
 .linchpin {
     height: 350px;
     width: 350px;
+
+    @media (min-width: $break) {
+        .linchpin {
+            height: 450px;
+            width: 450px;
+        }
+    }
 }
 
 .name {
     font-size: 40px;
     font-weight: 700;
+
+    @media (min-width: $break) {
+        .name {
+            font-size: 60px;
+        }
+    }
 } 
 
 .slogan {
     font-size: 30px;
     font-weight: 400;
     width: 100vw;
+
+    @media (min-width: 725px) {
+        .slogan {
+            padding: 0 15px;
+        }
+    }
+
+    @media (min-width: $break) {  
+        .slogan {
+            font-size: 50px;
+            width: 100%;
+        }
+    }
 }
   
 .nav-item {
@@ -98,6 +175,14 @@ body {
         font-size: 22px;
         text-align: center;
         padding: 0 20px;
+    }
+
+    @media (min-width: $break) {  
+        .nav-item h1 {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 70px;
+        }
     }
 }
 
@@ -198,6 +283,16 @@ footer {
         padding-top: 20px;
         margin-bottom: 7px;
     }
+
+    @media (min-width: $break) {  
+        .footer-name {
+            display: inline-block;
+        }
+        
+        .footer h3 {
+            font-size: 1.75rem;
+        }
+    }
 }
 
 .social a {
@@ -212,79 +307,4 @@ footer {
     }
 }
 
-@media (min-width: 504px) {
-    .col-1 {
-        height: 250px;
-    }
-}
-@media (min-width: 698px) {
-    .col-1 {
-        height: 300px;
-    }
-}
 
-@media (min-width: 725px) {
-    .slogan {
-        padding: 0 15px;
-    }
-}
-
-@media (max-width: 767px) {
-    .video {
-        display: none;
-    }
-
-    body {
-        background: url('../images/photo-of-brewed-coffee-2616174.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-}
-
-@media (min-width: $break) {  
-    .logo {
-       padding-right: 30px;
-    }
-
-    .linchpin {
-        height: 450px;
-        width: 450px;
-    }
-
-    .name {
-        font-size: 60px;
-    }
-
-    .slogan {
-        font-size: 50px;
-        width: 100%;
-    }
-    
-    .col-1 {
-        width: 53%;
-        height: 100vh;
-    }
-
-    .down-arrow {
-        padding-bottom: 20px;
-        margin-right: 3rem;
-    }
-
-    .col-2 {
-        width: 40%;
-    }
-
-    .nav-item h1 {
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 70px;
-    }
-
-    .footer-name {
-        display: inline-block;
-    } 
-
-    .footer h3 {
-        font-size: 1.75rem;
-    }
-}
